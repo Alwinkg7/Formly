@@ -1,0 +1,233 @@
+:root {
+  --primary: #4361ee;
+  --primary-hover: #3a56d4;
+  --danger: #f72585;
+  --danger-hover: #e5177b;
+  --text: #2b2d42;
+  --text-light: #8d99ae;
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --border-radius: 12px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-profile-container {
+  padding: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+}
+
+.profile-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.profile-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--danger));
+  border-radius: 2px;
+}
+
+.profile-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: var(--transition);
+}
+
+.profile-detail {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile-detail strong {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  flex: 1 1 auto;
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.button-danger {
+  background-color: var(--danger);
+  color: white;
+}
+
+.button-danger:hover {
+  background-color: var(--danger-hover);
+  transform: translateY(-1px);
+}
+
+.forms-header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.forms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.forms-list li {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  border-left: 4px solid var(--primary);
+}
+
+.forms-list li::before {
+  content: '📋';
+  margin-right: 0.75rem;
+  font-size: 1.2em;
+}
+
+.empty-message {
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+}
+
+/* Responsive adjustments */
+@media (min-width: 480px) {
+  .profile-header {
+    font-size: 1.75rem;
+  }
+  
+  .profile-detail {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  
+  .profile-detail strong {
+    min-width: 100px;
+  }
+  
+  .forms-header {
+    font-size: 1.375rem;
+  }
+  
+  .forms-list li {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .user-profile-container {
+    padding: 2rem;
+  }
+  
+  .profile-card {
+    padding: 1.75rem;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .button-primary {
+    box-shadow: 0 2px 8px rgba(67, 97, 238, 0.3);
+  }
+  
+  .button-primary:hover {
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.4);
+  }
+  
+  .button-danger {
+    box-shadow: 0 2px 8px rgba(247, 37, 133, 0.3);
+  }
+  
+  .button-danger:hover {
+    box-shadow: 0 4px 12px rgba(247, 37, 133, 0.4);
+  }
+  
+  .profile-card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .forms-list li:hover {
+    background-color: var(--bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateX(4px);
+  }
+  
+  .empty-message {
+    padding: 2rem;
+    border: 1px dashed rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Animation for empty state */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-card, .forms-list li, .empty-message {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.forms-list li {
+  animation-delay: calc(0.1s * var(--i));
+}

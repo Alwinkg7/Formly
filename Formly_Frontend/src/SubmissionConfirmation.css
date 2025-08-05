@@ -1,0 +1,165 @@
+.confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 20px;
+}
+
+.confirmation-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.confirmation-title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.confirmation-message {
+  color: #7f8c8d;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.summary-section {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.summary-section h3 {
+  color: #3498db;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.summary-section p {
+  margin: 8px 0;
+  color: #34495e;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.action-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fill-another {
+  background-color: #3498db;
+  color: white;
+}
+
+.fill-another:hover {
+  background-color: #2980b9;
+}
+
+.go-home {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.go-home:hover {
+  background-color: #bdc3c7;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #3498db;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .confirmation-card {
+    padding: 30px 20px;
+  }
+  
+  .confirmation-title {
+    font-size: 1.7rem;
+  }
+  
+  .confirmation-message {
+    font-size: 1rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .action-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .confirmation-container {
+    padding: 10px;
+  }
+  
+  .confirmation-card {
+    padding: 25px 15px;
+  }
+  
+  .confirmation-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .confirmation-message {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .summary-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .action-btn {
+    padding: 10px 20px;
+  }
+  
+  .footer {
+    font-size: 0.8rem;
+  }
+  
+  .footer-links a {
+    display: block;
+    margin: 5px 0;
+  }
+}
